@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const Schema = flight.Schema
+const Schema = mongoose.Schema
 
 const flightSchema = new Schema({
   airline: {
@@ -18,9 +18,15 @@ const flightSchema = new Schema({
     max: 9999
   } ,
   departs: {
-    type: Date(),
+    type: Date,
     default: function(){
       return new (Date().getFullYear()+1)
     }
   }
 })
+
+const Flight = mongoose.model('Flight', flightSchema)
+
+export {
+  Flight
+}
