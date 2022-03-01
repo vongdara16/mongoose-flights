@@ -12,8 +12,6 @@ function index(req, res){
 function newFlight(req, res){
   console.log('new flight')
   res.render('flights/new')
-  // console.log(Date.now())
-  // console.log(req.body)
 }
 
 function create(req, res){
