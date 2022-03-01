@@ -7,7 +7,7 @@ const flightSchema = new Schema({
     type: String,
     enum: ['American', 'Southwest', 'United']
   },
-  aiport: {
+  airport: {
     type: String,
     enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
     default: 'DEN'
