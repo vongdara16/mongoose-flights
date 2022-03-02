@@ -11,10 +11,9 @@
   </form>
   <p>Please ensure that the meal is not already in the list</p>
   <ul>
+    <%  %> 
     <% meals.forEach(meal => { %>
-      <li>
-        <%= meal.name %> 
-      </li>
+      <li><%= meal.name %></li>
     <% }) %> 
   </ul>
 </main>
