@@ -38,6 +38,12 @@ function create(req, res){
   })
 }
 
+function deleteFlight(req, res){
+  Flight.findByIdAndDelete(req.params.id, function(err, flight){
+    res.redirect('/flights')
+  })
+}
+
 function show(req, res){
   Flight.findById(req.params.id)
   .populate('meals')
@@ -74,6 +80,7 @@ export {
   index,
   newFlight as new,
   create,
+  deleteFlight as delete,
   show,
   createTicket,
   addMeal,

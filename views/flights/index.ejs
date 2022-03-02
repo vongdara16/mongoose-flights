@@ -21,7 +21,11 @@
           <td><%= flight.flightNo %></td>
           <td><%= flight.departs.toLocaleString() %></td>
           <td><a href="/flights/<%= flight._id %>">FLIGHT DETAILS</a></td>
-          <td><button type="submit">X</button></td>
+          <td>
+            <form action="/flights/<%= flight._id %>?_method=DELETE" method="post">
+              <button>X</button>
+            </form>
+          </td>
         </tr>
       <% }) %> 
     </tbody>
