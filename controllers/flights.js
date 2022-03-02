@@ -2,9 +2,11 @@ import { Flight } from '../models/flight.js'
 import { Meal } from '../models/meal.js'
 
 function index(req, res){
-  Flight.find({}, function (error, flights){
+  Flight.find({})
+  .sort({departs: 'asc'})
+  .exec ((error, flights) => {
     console.log(error)
-    res.render('flights/index', {
+    res.render("flights/index", {
       flights
     })
   })

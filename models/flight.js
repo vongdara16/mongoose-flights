@@ -34,6 +34,10 @@ const flightSchema = new Schema({
   departs: {
     type: Date,
     default: Date.now() + 365*24*60*60*1000
+    // default: function(){
+    //   const newDate = Date.now() + 365*24*60*60*1000
+    //   return newDate.toLocaleString()
+    // }
   },
   tickets: [ticketSchema],
   meals: [{ type: Schema.Types.ObjectId, ref: 'Meal'}]
