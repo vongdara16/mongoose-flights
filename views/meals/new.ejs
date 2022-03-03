@@ -3,17 +3,18 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>Add Meal</h1>
+  <h1>Add A New Meal</h1>
   <form action="/meals" method="post" id="add-meal-form">
-    <label for="name-input">Name: </label>
+    <label for="name-input">Meal Item: </label>
     <input type="text" name="name" id="name-input">
     <button type="submit">Add Meal</button>
   </form>
-  <p>Please ensure that the meal is not already in the list</p>
+  <p>Please ensure that the meal is not already in the list below!</p>
+  <h3>Current Meals!</h3>
   <ul>
     <%  %> 
     <% meals.forEach(meal => { %>
-      <li><%= meal.name %></li>
+      <li><i class="fas fa-utensils"></i> <%= meal.name %></li>
     <% }) %> 
   </ul>
 </main>

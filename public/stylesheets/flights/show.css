@@ -31,13 +31,27 @@ section {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1.6rem;
+  border: 4px solid #424748;
+  border-radius: 7px;
+  padding: 15px;
+  background-color: #EBEBEB;
 }
 
 section div:nth-child(even) {
   font-weight: bold;
 }
 
-#add-review-form {
+section div:nth-child(odd) {
+  font-size: 2.2rem;
+}
+
+section div {
+  border-bottom: 2px solid #424748;
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+/* #add-ticket {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1.6rem;
@@ -53,4 +67,77 @@ section div:nth-child(even) {
   width: 16rem;
   grid-column: 2 / 3;
   margin-bottom: 2.4rem;
+} */
+
+h3#table-meals {
+  padding: 0px;
+  margin: 10px auto 2px;
+  font-size: 2.7rem;
+  border-bottom: 3px solid #424748;
+}
+
+table#meals tbody td {
+  padding: 5px 10px;
+  color: #C8C8C8;
+  background-color: #424748;
+  border: 2px solid #424748;
+  border-radius: 10px;
+}
+
+table {
+  border-spacing: 10px 5px;
+}
+
+#add-meal-to-flight select {
+  font-size: 1.8rem;
+}
+
+#add-meal-to-flight button {
+  font-size: 1.8rem;
+  background-color: lightgray;
+  border: 2px solid #424748;
+  border-radius: 5px;
+}
+
+#add-meal-to-flight button:hover {
+  background-color: #424748;
+  color: white;
+  box-shadow: 2px 2px 1px 1px gray;
+}
+
+h2#tickets-id {
+  border-bottom: 3px solid #424748;
+  font-size: 2.7rem;
+}
+
+#add-ticket label {
+  font-size: 2.0rem;
+  font-weight: 600;
+}
+
+#add-ticket button {
+  background-color: lightgray;
+  border: 2px solid #424748;
+  border-radius: 5px;
+}
+
+#add-ticket button:hover {
+  background-color: #424748;
+  color: white;
+  box-shadow: 2px 2px 1px 1px gray;
+}
+
+h3#total-tickets {
+  padding: 0;
+  margin: 10px auto;
+}
+
+table#tickets {
+  background-color: lightgray;
+  border: 4px solid #707070;
+  border-radius: 10px;
+}
+
+i > span {
+  visibility: visible;
 }

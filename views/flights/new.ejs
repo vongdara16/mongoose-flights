@@ -1,35 +1,48 @@
 <%- include('../partials/html-head') %> 
-<link rel="stylesheet" href="/stylesheets/flights/new">
+<link rel="stylesheet" href="/stylesheets/flights/new.css">
 <%- include('../partials/nav') %> 
 
 <main>
-  <h1>Enter a New Flight</h1>
+  <h1>Enter A New Flight</h1>
   <form action="/flights" method="POST">
-    <label>Airline:
-      <select name="airline">
-        <option value="American">American</option>
-        <option value="Southwest">Southwest</option>
-        <option value="United">United</option>
-      </select>
-    </label><br>
-    <label>Airport:
-      <select name="airport">
-        <option value="AUS">AUS</option>
-        <option value="DFW">DFW</option>
-        <option  value="DEN" selected>DEN</option>
-        <option value="LAX">LAX</option>
-        <option value="SAN">SAN</option>
-      </select>
-    </label><br>
-    <label>Flight Number
-      <input type="text" name="flightNo">
-    </label><br>
-    <label>Departs
-      <input type="datetime-local" name="departs" value="<%= departsDate %>">
-    </label><br>
-    <button type="submit">Add Flight</button>
+  <button type="submit">Add Flight <i class="fas fa-plus fa-sm"></i></button>
+    <table>
+      <thead>
+        <tr>
+          <th>Airline: </th>
+          <th>Airport: </th>
+          <th>Flight #: </th>
+          <th>Departure Date: </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <select name="airline">
+              <option value="American">American</option>
+              <option value="Southwest">Southwest</option>
+              <option value="United">United</option>
+            </select>
+          </td>
+          <td>
+            <select name="airport">
+              <option value="AUS">AUS</option>
+              <option value="DFW">DFW</option>
+              <option  value="DEN" selected>DEN</option>
+              <option value="LAX">LAX</option>
+              <option value="SAN">SAN</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" name="flightNo">
+          </td>
+          <td>
+            <input type="datetime-local" name="departs" value="<%= departsDate %>">
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </form>
-  <a href="/">Go Home</a>
 </main>
 
 

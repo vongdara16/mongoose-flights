@@ -3,14 +3,16 @@
 <%- include('../partials/nav') %> 
 
 <main>
-  <h1>Flight List</h1>
+  <h1><%= title  %> </h1>
   <table>
     <thead>
       <tr>
         <th>Airline</th>
         <th>Airport</th>
-        <th>Flight Number</th>
-        <th>Departs</th>
+        <th>Flight #</th>
+        <th>Departure Date</th>
+        <th>Flight Info</th>
+        <th><i class="fas fa-trash"></i></th>
       </tr>
     </thead>
     <tbody>
@@ -20,17 +22,16 @@
           <td><%= flight.airport %></td>
           <td><%= flight.flightNo %></td>
           <td><%= flight.departs.toLocaleString() %></td>
-          <td><a href="/flights/<%= flight._id %>">FLIGHT DETAILS</a></td>
+          <td><a href="/flights/<%= flight._id %>">More Info</a></td>
           <td>
             <form action="/flights/<%= flight._id %>?_method=DELETE" method="post">
-              <button>X</button>
+              <button><i class="fas fa-delete-left fa-xl"></i></button>
             </form>
           </td>
         </tr>
       <% }) %> 
     </tbody>
   </table>
-  <a href="/">Go Home</a>
 </main>
 
 <%- include('../partials/footer') %> 

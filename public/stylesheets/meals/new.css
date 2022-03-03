@@ -1,4 +1,4 @@
-form {
+/* form {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1.6rem;
@@ -16,4 +16,53 @@ form > button {
   width: 16rem;
   grid-column: 2 / 3;
   margin-bottom: 2.4rem;
+} */
+ul {
+  list-style: none;
+  font-size: 2.8rem;
+  margin: 3px auto;
+}
+
+#add-meal-form label {
+  font-size: 2.3rem;
+}
+
+#add-meal-form input {
+  font-size: 2.3rem;
+}
+
+#add-meal-form button {
+  font-size: 2.3rem;
+  background-color: lightgray;
+  border: 2px solid #424748;
+  border-radius: 5px;
+}
+
+#add-meal-form button:hover {
+  background-color: #424748;
+  color: #C8C8C8;
+  box-shadow: 2px 2px 1px 1px gray;
+}
+
+
+
+p {
+  font-size: 2.7rem;
+  text-decoration: underline;
+  color: #BF211E;
+}
+
+h3 {
+  font-size: 2.5rem;
+  margin: 0 auto;
+  border-bottom: 3px solid #424748;
+}
+
+li i {
+  font-size: 2.0rem;
+  padding-right: 5px;
+}
+
+i > span {
+  visibility: visible;
 }

@@ -7,22 +7,20 @@ function index(req, res){
   .exec ((error, flights) => {
     console.log(error)
     res.render("flights/index", {
-      flights
+      flights,
+      title: 'List of Flights'
     })
   })
 }
 
 function newFlight(req, res){
-  // console.log('new flight')
-  // res.render('flights/new')
-
-  //new below
   const newFlight = new Flight();
-  // Obtain the default date
   const dt = newFlight.departs;
-  // Format the date for the value attribute of the input
   const departsDate = dt.toISOString().slice(0, 16);
-  res.render('flights/new', {departsDate});
+  res.render('flights/new', {
+    departsDate,
+    title: 'Add Flight'
+  });
 }
 
 function create(req, res){
@@ -76,6 +74,14 @@ function addMeal(req, res){
   })
 }
 
+function deleteMeal(req, res){
+  console.log('testing')
+  console.log(req.params.id)
+  Meal.findByIdAndDelete(req.params.id, function(err, meal){
+    res.redirect('/flights')
+  })
+}
+
 export {
   index,
   newFlight as new,
@@ -84,4 +90,5 @@ export {
   show,
   createTicket,
   addMeal,
+  deleteMeal,
 }

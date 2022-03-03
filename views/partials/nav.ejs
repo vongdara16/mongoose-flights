@@ -1,12 +1,13 @@
 </head>
 <body>
   <nav>
-    <i class="fas fa-solid fa-bolt fa-2x"></i> 
-    <a href="/meals/new">ADD MEAL</a>
+    <i class="fas fa-solid fa-paper-plane fa-2x"><span>Mongoose Flights</span></i> 
+    <a href="/meals/new" <%- title === 'Add Meal' ? 'class="active"' : "" %>
+      >ADD MEAL</a>
     <a 
-      href="/flights/new" <%# title === 'Add Flight' ? 'class="active"' : "" %>
+      href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : "" %>
     >ADD FLIGHT</a>
     <a 
-      href="/flights" <%# title === 'All Flights' ? 'class="active"' : "" %>
+      href="/flights" <%- title === 'List of Flights' ? 'class="active"' : "" %>
     >ALL FLIGHTS</a>
   </nav>
